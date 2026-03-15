@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FootballForYou – Anfragen</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>FootballForYou</h1>
+      <p>Anfragefunktion</p>
+    </div>
+  </header>
 
+  <nav class="main-nav">
+    <div class="container nav-container">
+      <a href="index.html">Start</a>
+      <a href="vorstand.html">Vorstand</a>
+      <a href="trainer.html">Trainer</a>
+      <a href="spieler.html">Spieler</a>
+      <a href="termine.html">Termine</a>
+      <a href="anfragen.html">Anfragen</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="content-box">
+      <h2>Anfrage senden</h2>
+      <p>
+        Über dieses Formular können organisatorische oder sportliche Anliegen direkt
+        an die zuständige Rolle übermittelt werden.
+      </p>
+    </section>
+
+    <section class="content-box">
+      <form id="requestForm">
+        <label for="empfaenger">Empfänger</label><br />
+        <select id="empfaenger" name="empfaenger">
+          <option value="">Bitte auswählen</option>
+          <option value="vorstand">Vorstand</option>
+          <option value="trainer">Trainer</option>
+        </select>
+
+        <br /><br />
+
+        <label for="betreff">Betreff</label><br />
+        <input type="text" id="betreff" name="betreff" placeholder="Betreff eingeben" />
+
+        <br /><br />
+
+        <label for="nachricht">Nachricht</label><br />
+        <textarea
+          id="nachricht"
+          name="nachricht"
+          rows="6"
+          placeholder="Nachricht eingeben"
+        ></textarea>
+
+        <br /><br />
+
+        <button type="button" onclick="submitRequest()">Anfrage senden</button>
+        <p id="formMessage"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Prototype by Marius</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
