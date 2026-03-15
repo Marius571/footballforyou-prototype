@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FootballForYou</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>FootballForYou</h1>
+    <p>Barrierearme und sichere digitale Vereinsplattform</p>
+  </header>
 
+  <nav>
+    <a href="#start">Start</a>
+    <a href="#funktionen">Funktionen</a>
+    <a href="#rollen">Rollen</a>
+  </nav>
+
+  <main>
+    <section id="start">
+      <h2>Willkommen</h2>
+      <p>
+        Dieser Prototyp zeigt die Grundidee einer digitalen Vereinsplattform
+        für Fußballvereine.
+      </p>
+      <button onclick="showMessage()">Mehr anzeigen</button>
+      <p id="message"></p>
+    </section>
+
+    <section id="funktionen">
+      <h2>Kernfunktionen</h2>
+      <ul>
+        <li>Termine verwalten</li>
+        <li>Aufgaben organisieren</li>
+        <li>Anfragen stellen</li>
+        <li>Informationen zentral bereitstellen</li>
+      </ul>
+    </section>
+
+    <section id="rollen">
+      <h2>Nutzerrollen</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>Vorstand</h3>
+          <p>Organisation, Aufgaben und Termine verwalten.</p>
+        </div>
+        <div class="card">
+          <h3>Trainer</h3>
+          <p>Trainingsinfos und Kommunikation mit dem Vorstand.</p>
+        </div>
+        <div class="card">
+          <h3>Spieler</h3>
+          <p>Spiele, Training und Anfragen übersichtlich einsehen.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Prototype by Marius</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
