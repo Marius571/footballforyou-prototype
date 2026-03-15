@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FootballForYou</title>
+  <title>FootballForYou – Start</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
   <header class="site-header">
     <div class="container">
       <h1>FootballForYou</h1>
@@ -14,52 +16,64 @@
     </div>
   </header>
 
-<nav class="main-nav">
-  <div class="container nav-container">
-    <a href="index.html" class="nav-button">🏠 <span>Start</span></a>
-    <a href="vorstand.html" class="nav-button">📋 <span>Vorstand</span></a>
-    <a href="trainer.html" class="nav-button">👨‍🏫 <span>Trainer</span></a>
-    <a href="spieler.html" class="nav-button">⚽ <span>Spieler</span></a>
-    <a href="termine.html" class="nav-button">📅 <span>Termine</span></a>
-    <a href="anfragen.html" class="nav-button">✉️ <span>Anfragen</span></a>
-  </div>
-</nav>
+  <nav class="main-nav" aria-label="Hauptnavigation">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-button active">🏠 <span>Start</span></a>
+      <a href="vorstand.html" class="nav-button">📋 <span>Vorstand</span></a>
+      <a href="trainer.html" class="nav-button">👨‍🏫 <span>Trainer</span></a>
+      <a href="spieler.html" class="nav-button">⚽ <span>Spieler</span></a>
+      <a href="termine.html" class="nav-button">📅 <span>Termine</span></a>
+      <a href="anfragen.html" class="nav-button">✉️ <span>Anfragen</span></a>
+    </div>
+  </nav>
 
-  <main class="container">
-    <section id="start" class="content-box">
-      <h2>Willkommen</h2>
+  <main id="main-content" class="container">
+    <section class="content-box">
+      <h2>Willkommen bei FootballForYou</h2>
       <p>
         Dieser Prototyp zeigt die Grundidee einer digitalen Vereinsplattform
-        für Fußballvereine.
+        für Fußballvereine. Ziel ist eine verständliche, sichere und
+        generationenübergreifend nutzbare Unterstützung der Vereinsarbeit.
       </p>
-      <button onclick="showMessage()">Mehr anzeigen</button>
-      <p id="message"></p>
+      <button type="button" onclick="showMessage()">Mehr anzeigen</button>
+      <p id="message" class="info-message"></p>
     </section>
 
-    <section id="funktionen" class="content-box">
+    <section class="content-box">
       <h2>Kernfunktionen</h2>
-      <ul>
-        <li>Termine verwalten</li>
-        <li>Aufgaben organisieren</li>
-        <li>Anfragen stellen</li>
-        <li>Informationen zentral bereitstellen</li>
-      </ul>
+      <div class="card-container">
+        <div class="card">
+          <h3>📅 Termine</h3>
+          <p>Trainingszeiten, Spiele und Vereinsereignisse zentral anzeigen.</p>
+        </div>
+        <div class="card">
+          <h3>📋 Aufgaben</h3>
+          <p>Organisatorische Aufgaben übersichtlich verwalten.</p>
+        </div>
+        <div class="card">
+          <h3>✉️ Anfragen</h3>
+          <p>Anliegen gezielt an Trainer oder Vorstand senden.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="rollen" class="content-box">
+    <section class="content-box">
       <h2>Nutzerrollen</h2>
       <div class="card-container">
         <div class="card">
-          <h3>Vorstand</h3>
-          <p>Organisation, Aufgaben und Termine verwalten.</p>
+          <h3>📋 Vorstand</h3>
+          <p>Verwaltet Organisation, Aufgaben und wichtige Vereinstermine.</p>
+          <a class="inline-link" href="vorstand.html">Zum Vorstandsbereich</a>
         </div>
         <div class="card">
-          <h3>Trainer</h3>
-          <p>Trainingsinfos und Kommunikation mit dem Vorstand.</p>
+          <h3>👨‍🏫 Trainer</h3>
+          <p>Koordiniert Training, Spielbetrieb und Kommunikation im Team.</p>
+          <a class="inline-link" href="trainer.html">Zum Trainerbereich</a>
         </div>
         <div class="card">
-          <h3>Spieler</h3>
-          <p>Spiele, Training und Anfragen übersichtlich einsehen.</p>
+          <h3>⚽ Spieler</h3>
+          <p>Sieht Training, Spiele, Wetter und kann Rückfragen stellen.</p>
+          <a class="inline-link" href="spieler.html">Zum Spielerbereich</a>
         </div>
       </div>
     </section>
