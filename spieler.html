@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
   <header class="site-header">
     <div class="container">
       <h1>FootballForYou</h1>
@@ -14,50 +16,60 @@
     </div>
   </header>
 
-  <nav class="main-nav">
+  <nav class="main-nav" aria-label="Hauptnavigation">
     <div class="container nav-container">
-      <a href="index.html">Start</a>
-      <a href="vorstand.html">Vorstand</a>
-      <a href="trainer.html">Trainer</a>
-      <a href="spieler.html">Spieler</a>
-      <a href="termine.html">Termine</a>
-      <a href="anfragen.html">Anfragen</a>
+      <a href="index.html" class="nav-button">🏠 <span>Start</span></a>
+      <a href="vorstand.html" class="nav-button">📋 <span>Vorstand</span></a>
+      <a href="trainer.html" class="nav-button">👨‍🏫 <span>Trainer</span></a>
+      <a href="spieler.html" class="nav-button active">⚽ <span>Spieler</span></a>
+      <a href="termine.html" class="nav-button">📅 <span>Termine</span></a>
+      <a href="anfragen.html" class="nav-button">✉️ <span>Anfragen</span></a>
     </div>
   </nav>
 
-  <main class="container">
+  <main id="main-content" class="container">
     <section class="content-box">
       <h2>Willkommen im Spielerbereich</h2>
       <p>
-        Hier finden Spieler alle wichtigen Informationen zu Training, Spielbetrieb
-        und Kontaktmöglichkeiten zum Trainer.
+        Spieler erhalten hier alle wichtigen Informationen zu Training,
+        Spielbetrieb und Kontaktmöglichkeiten zum Trainer.
       </p>
     </section>
 
     <section class="content-box">
-      <h2>Nächstes Training</h2>
-      <p>Dienstag, 18:30 Uhr – Treffpunkt 18:15 Uhr auf Platz 2.</p>
+      <h2>Schnellzugriff</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>🏃 Nächstes Training</h3>
+          <p>Dienstag, 18:30 Uhr – Treffpunkt 18:15 Uhr auf Platz 2.</p>
+        </div>
+        <div class="card">
+          <h3>🏆 Nächstes Spiel</h3>
+          <p>Samstag, 15:00 Uhr – Heimspiel gegen SV Obertal.</p>
+        </div>
+        <div class="card">
+          <h3>🌤️ Wetter</h3>
+          <p>Leicht bewölkt, 14 °C – gute Bedingungen für das Training.</p>
+        </div>
+      </div>
     </section>
 
     <section class="content-box">
-      <h2>Nächstes Spiel</h2>
-      <p>Samstag, 15:00 Uhr – Heimspiel gegen SV Obertal.</p>
-    </section>
-
-    <section class="content-box">
-      <h2>Wetterinformation</h2>
-      <p>Leicht bewölkt, 14 °C – optimale Bedingungen für das Training.</p>
+      <h2>Wichtige Hinweise</h2>
+      <ul class="info-list">
+        <li>Trainingskleidung wettergerecht wählen</li>
+        <li>Bitte 15 Minuten vor Trainingsbeginn vor Ort sein</li>
+        <li>Rückfragen direkt an den Trainer senden</li>
+      </ul>
     </section>
 
     <section class="content-box">
       <h2>Anfrage an den Trainer</h2>
       <p>
-        Spieler können Rückfragen zu Training, Treffpunkt oder Verfügbarkeit direkt
-        an den Trainer senden.
+        Rückfragen zu Training, Treffpunkt oder Verfügbarkeit können direkt
+        über das Formular gestellt werden.
       </p>
-      <p>
-        <a href="anfragen.html">Zur Anfragefunktion</a>
-      </p>
+      <a class="action-link" href="anfragen.html">Zur Anfragefunktion</a>
     </section>
   </main>
 
@@ -66,5 +78,7 @@
       <p>Prototype by Marius</p>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
