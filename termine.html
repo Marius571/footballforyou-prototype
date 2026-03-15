@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
   <header class="site-header">
     <div class="container">
       <h1>FootballForYou</h1>
@@ -14,44 +16,64 @@
     </div>
   </header>
 
-  <nav class="main-nav">
+  <nav class="main-nav" aria-label="Hauptnavigation">
     <div class="container nav-container">
-      <a href="index.html">Start</a>
-      <a href="vorstand.html">Vorstand</a>
-      <a href="trainer.html">Trainer</a>
-      <a href="spieler.html">Spieler</a>
-      <a href="termine.html">Termine</a>
-      <a href="anfragen.html">Anfragen</a>
+      <a href="index.html" class="nav-button">🏠 <span>Start</span></a>
+      <a href="vorstand.html" class="nav-button">📋 <span>Vorstand</span></a>
+      <a href="trainer.html" class="nav-button">👨‍🏫 <span>Trainer</span></a>
+      <a href="spieler.html" class="nav-button">⚽ <span>Spieler</span></a>
+      <a href="termine.html" class="nav-button active">📅 <span>Termine</span></a>
+      <a href="anfragen.html" class="nav-button">✉️ <span>Anfragen</span></a>
     </div>
   </nav>
 
-  <main class="container">
+  <main id="main-content" class="container">
     <section class="content-box">
       <h2>Alle anstehenden Termine</h2>
       <p>
-        Diese Übersicht bündelt zentrale Vereinsereignisse, Trainingszeiten und Spiele
+        Diese Übersicht bündelt Trainingszeiten, Spiele und Vereinsereignisse
         an einem Ort.
       </p>
     </section>
 
     <section class="content-box">
       <h2>Filter</h2>
-      <div class="card-container">
-        <div class="card"><strong>Alle</strong></div>
-        <div class="card"><strong>Training</strong></div>
-        <div class="card"><strong>Spiele</strong></div>
+      <div class="filter-buttons">
+        <button type="button" class="filter-button active-filter" onclick="filterAppointments('alle', this)">Alle</button>
+        <button type="button" class="filter-button" onclick="filterAppointments('training', this)">Training</button>
+        <button type="button" class="filter-button" onclick="filterAppointments('spiel', this)">Spiele</button>
+        <button type="button" class="filter-button" onclick="filterAppointments('verein', this)">Verein</button>
       </div>
     </section>
 
     <section class="content-box">
       <h2>Terminliste</h2>
-      <ul>
-        <li>Dienstag, 18:30 Uhr – Training Herrenmannschaft</li>
-        <li>Donnerstag, 19:00 Uhr – Abschlusstraining</li>
-        <li>Freitag, 18:00 Uhr – Jugendtrainer-Besprechung</li>
-        <li>Samstag, 15:00 Uhr – Heimspiel gegen SV Obertal</li>
-        <li>Montag, 18:00 Uhr – Vorstandssitzung</li>
-      </ul>
+      <div class="appointment-list">
+        <article class="appointment-item" data-category="training">
+          <h3>🏃 Dienstag, 18:30 Uhr</h3>
+          <p>Training Herrenmannschaft auf Platz 2</p>
+        </article>
+
+        <article class="appointment-item" data-category="training">
+          <h3>🏃 Donnerstag, 19:00 Uhr</h3>
+          <p>Abschlusstraining vor dem Spiel am Wochenende</p>
+        </article>
+
+        <article class="appointment-item" data-category="verein">
+          <h3>📋 Freitag, 18:00 Uhr</h3>
+          <p>Jugendtrainer-Besprechung im Vereinsheim</p>
+        </article>
+
+        <article class="appointment-item" data-category="spiel">
+          <h3>🏆 Samstag, 15:00 Uhr</h3>
+          <p>Heimspiel gegen SV Obertal</p>
+        </article>
+
+        <article class="appointment-item" data-category="verein">
+          <h3>📅 Montag, 18:00 Uhr</h3>
+          <p>Vorstandssitzung zur Saisonplanung</p>
+        </article>
+      </div>
     </section>
   </main>
 
@@ -60,5 +82,7 @@
       <p>Prototype by Marius</p>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
