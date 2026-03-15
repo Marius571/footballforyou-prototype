@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
   <header class="site-header">
     <div class="container">
       <h1>FootballForYou</h1>
@@ -14,59 +16,67 @@
     </div>
   </header>
 
-  <nav class="main-nav">
+  <nav class="main-nav" aria-label="Hauptnavigation">
     <div class="container nav-container">
-      <a href="index.html">Start</a>
-      <a href="vorstand.html">Vorstand</a>
-      <a href="trainer.html">Trainer</a>
-      <a href="spieler.html">Spieler</a>
-      <a href="termine.html">Termine</a>
-      <a href="anfragen.html">Anfragen</a>
+      <a href="index.html" class="nav-button">🏠 <span>Start</span></a>
+      <a href="vorstand.html" class="nav-button active">📋 <span>Vorstand</span></a>
+      <a href="trainer.html" class="nav-button">👨‍🏫 <span>Trainer</span></a>
+      <a href="spieler.html" class="nav-button">⚽ <span>Spieler</span></a>
+      <a href="termine.html" class="nav-button">📅 <span>Termine</span></a>
+      <a href="anfragen.html" class="nav-button">✉️ <span>Anfragen</span></a>
     </div>
   </nav>
 
-  <main class="container">
+  <main id="main-content" class="container">
     <section class="content-box">
       <h2>Willkommen im Vorstandsbereich</h2>
       <p>
-        In diesem Bereich werden organisatorische Aufgaben, Termine und offene Anliegen
-        des Vereins zentral verwaltet.
+        In diesem Bereich werden organisatorische Aufgaben, Termine und offene
+        Anliegen des Vereins zentral verwaltet.
       </p>
     </section>
 
     <section class="content-box">
-      <h2>Offene Aufgaben</h2>
+      <h2>Schnellzugriff</h2>
       <div class="card-container">
         <div class="card">
-          <h3>Mitgliederversammlung</h3>
-          <p>Einladung final prüfen und versenden.</p>
+          <h3>📋 Offene Aufgaben</h3>
+          <p>3 Aufgaben stehen aktuell zur Bearbeitung an.</p>
         </div>
         <div class="card">
-          <h3>Heimspielorganisation</h3>
-          <p>Platzdienst und Material für Samstag abstimmen.</p>
+          <h3>📅 Nächste Termine</h3>
+          <p>Die wichtigsten Sitzungen und Spieltage im Blick behalten.</p>
         </div>
         <div class="card">
-          <h3>Jugendturnier</h3>
-          <p>Termin mit Trainern und Helfern abstimmen.</p>
+          <h3>✉️ Offene Anfragen</h3>
+          <p>2 neue Anliegen wurden an den Vorstand gesendet.</p>
         </div>
       </div>
     </section>
 
     <section class="content-box">
-      <h2>Nächste Termine</h2>
-      <ul>
-        <li>Montag, 18:00 Uhr – Vorstandssitzung</li>
-        <li>Mittwoch, 19:30 Uhr – Abstimmung mit den Trainern</li>
-        <li>Samstag, 14:00 Uhr – Heimspiel und Organisation vor Ort</li>
+      <h2>Offene Aufgaben</h2>
+      <ul class="info-list">
+        <li>Einladung zur Mitgliederversammlung final prüfen</li>
+        <li>Heimspielorganisation für Samstag abstimmen</li>
+        <li>Jugendturnier mit Trainern koordinieren</li>
       </ul>
     </section>
 
     <section class="content-box">
+      <h2>Nächste Termine</h2>
+      <ul class="info-list">
+        <li>Montag, 18:00 Uhr – Vorstandssitzung</li>
+        <li>Mittwoch, 19:30 Uhr – Abstimmung mit den Trainern</li>
+        <li>Samstag, 14:00 Uhr – Heimspiel und Organisation vor Ort</li>
+      </ul>
+      <a class="action-link" href="termine.html">Zur Terminübersicht</a>
+    </section>
+
+    <section class="content-box">
       <h2>Offene Anfragen</h2>
-      <p>Es liegen aktuell 2 neue Anfragen von Trainern zur Bearbeitung vor.</p>
-      <p>
-        <a href="anfragen.html">Zur Anfrageübersicht wechseln</a>
-      </p>
+      <p>Es liegen aktuell zwei neue organisatorische Anfragen zur Bearbeitung vor.</p>
+      <a class="action-link" href="anfragen.html">Zur Anfragefunktion</a>
     </section>
   </main>
 
@@ -75,5 +85,7 @@
       <p>Prototype by Marius</p>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
