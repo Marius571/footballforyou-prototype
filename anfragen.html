@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
   <header class="site-header">
     <div class="container">
       <h1>FootballForYou</h1>
@@ -14,54 +16,59 @@
     </div>
   </header>
 
-  <nav class="main-nav">
+  <nav class="main-nav" aria-label="Hauptnavigation">
     <div class="container nav-container">
-      <a href="index.html">Start</a>
-      <a href="vorstand.html">Vorstand</a>
-      <a href="trainer.html">Trainer</a>
-      <a href="spieler.html">Spieler</a>
-      <a href="termine.html">Termine</a>
-      <a href="anfragen.html">Anfragen</a>
+      <a href="index.html" class="nav-button">🏠 <span>Start</span></a>
+      <a href="vorstand.html" class="nav-button">📋 <span>Vorstand</span></a>
+      <a href="trainer.html" class="nav-button">👨‍🏫 <span>Trainer</span></a>
+      <a href="spieler.html" class="nav-button">⚽ <span>Spieler</span></a>
+      <a href="termine.html" class="nav-button">📅 <span>Termine</span></a>
+      <a href="anfragen.html" class="nav-button active">✉️ <span>Anfragen</span></a>
     </div>
   </nav>
 
-  <main class="container">
+  <main id="main-content" class="container">
     <section class="content-box">
       <h2>Anfrage senden</h2>
       <p>
-        Über dieses Formular können organisatorische oder sportliche Anliegen direkt
-        an die zuständige Rolle übermittelt werden.
+        Über dieses Formular können organisatorische oder sportliche Anliegen
+        direkt an die zuständige Rolle übermittelt werden.
       </p>
     </section>
 
     <section class="content-box">
-      <form id="requestForm">
-        <label for="empfaenger">Empfänger</label><br />
-        <select id="empfaenger" name="empfaenger">
-          <option value="">Bitte auswählen</option>
-          <option value="vorstand">Vorstand</option>
-          <option value="trainer">Trainer</option>
-        </select>
+      <form id="requestForm" class="request-form" novalidate>
+        <div class="form-group">
+          <label for="empfaenger">Empfänger</label>
+          <select id="empfaenger" name="empfaenger">
+            <option value="">Bitte auswählen</option>
+            <option value="vorstand">Vorstand</option>
+            <option value="trainer">Trainer</option>
+          </select>
+        </div>
 
-        <br /><br />
+        <div class="form-group">
+          <label for="betreff">Betreff</label>
+          <input
+            type="text"
+            id="betreff"
+            name="betreff"
+            placeholder="Betreff eingeben"
+          />
+        </div>
 
-        <label for="betreff">Betreff</label><br />
-        <input type="text" id="betreff" name="betreff" placeholder="Betreff eingeben" />
-
-        <br /><br />
-
-        <label for="nachricht">Nachricht</label><br />
-        <textarea
-          id="nachricht"
-          name="nachricht"
-          rows="6"
-          placeholder="Nachricht eingeben"
-        ></textarea>
-
-        <br /><br />
+        <div class="form-group">
+          <label for="nachricht">Nachricht</label>
+          <textarea
+            id="nachricht"
+            name="nachricht"
+            rows="6"
+            placeholder="Nachricht eingeben"
+          ></textarea>
+        </div>
 
         <button type="button" onclick="submitRequest()">Anfrage senden</button>
-        <p id="formMessage"></p>
+        <p id="formMessage" class="info-message" aria-live="polite"></p>
       </form>
     </section>
   </main>
