@@ -7,19 +7,23 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>FootballForYou</h1>
-    <p>Barrierearme und sichere digitale Vereinsplattform</p>
+  <header class="site-header">
+    <div class="container">
+      <h1>FootballForYou</h1>
+      <p>Barrierearme und sichere digitale Vereinsplattform</p>
+    </div>
   </header>
 
-  <nav>
-    <a href="#start">Start</a>
-    <a href="#funktionen">Funktionen</a>
-    <a href="#rollen">Rollen</a>
+  <nav class="main-nav">
+    <div class="container nav-container">
+      <a href="#start">Start</a>
+      <a href="#funktionen">Funktionen</a>
+      <a href="#rollen">Rollen</a>
+    </div>
   </nav>
 
-  <main>
-    <section id="start">
+  <main class="container">
+    <section id="start" class="content-box">
       <h2>Willkommen</h2>
       <p>
         Dieser Prototyp zeigt die Grundidee einer digitalen Vereinsplattform
@@ -29,7 +33,7 @@
       <p id="message"></p>
     </section>
 
-    <section id="funktionen">
+    <section id="funktionen" class="content-box">
       <h2>Kernfunktionen</h2>
       <ul>
         <li>Termine verwalten</li>
@@ -39,7 +43,7 @@
       </ul>
     </section>
 
-    <section id="rollen">
+    <section id="rollen" class="content-box">
       <h2>Nutzerrollen</h2>
       <div class="card-container">
         <div class="card">
@@ -58,8 +62,10 @@
     </section>
   </main>
 
-  <footer>
-    <p>Prototype by Marius</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>Prototype by Marius</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
