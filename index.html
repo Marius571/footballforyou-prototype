@@ -9,20 +9,43 @@
 <body>
   <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
 
+  <div class="meta-bar">
+    <div class="container meta-bar-inner">
+      <div class="view-menu">
+        <button
+          type="button"
+          class="view-menu-button"
+          onclick="toggleViewMenu()"
+          aria-expanded="false"
+          aria-controls="viewMenuPanel"
+          id="viewMenuToggle"
+        >
+          👁️ Ansicht
+        </button>
+
+        <div class="view-menu-panel" id="viewMenuPanel" hidden>
+          <p class="view-menu-title">Schriftgröße anpassen</p>
+          <div class="view-menu-options">
+            <button type="button" class="font-button" onclick="setFontSize('small')">
+              A- Kleinere Schrift
+            </button>
+            <button type="button" class="font-button" onclick="setFontSize('default')">
+              A Standard
+            </button>
+            <button type="button" class="font-button" onclick="setFontSize('large')">
+              A+ Größere Schrift
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <header class="site-header">
     <div class="container header-inner">
       <div class="header-text">
         <h1>FootballForYou</h1>
         <p>Die Vereinsplattform für Termine, Informationen und Anfragen</p>
-      </div>
-
-      <div class="font-controls" aria-label="Schriftgröße anpassen">
-        <span class="font-controls-label">Schriftgröße</span>
-        <div class="font-buttons">
-          <button type="button" class="font-button" onclick="setFontSize('small')">A-</button>
-          <button type="button" class="font-button" onclick="setFontSize('default')">A</button>
-          <button type="button" class="font-button" onclick="setFontSize('large')">A+</button>
-        </div>
       </div>
     </div>
   </header>
