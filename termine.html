@@ -12,17 +12,16 @@
   <header class="site-header">
     <div class="container">
       <h1>FootballForYou</h1>
-      <p>Terminübersicht</p>
+      <p>Terminübersicht für Training, Spiele und Vereinsleben</p>
     </div>
   </header>
 
   <nav class="main-nav" aria-label="Hauptnavigation">
     <div class="container nav-container">
       <a href="index.html" class="nav-button">🏠 <span>Start</span></a>
-      <a href="vorstand.html" class="nav-button">📋 <span>Vorstand</span></a>
-      <a href="trainer.html" class="nav-button">👨‍🏫 <span>Trainer</span></a>
-      <a href="spieler.html" class="nav-button">⚽ <span>Spieler</span></a>
       <a href="termine.html" class="nav-button active">📅 <span>Termine</span></a>
+      <a href="infos.html" class="nav-button">📢 <span>Infos</span></a>
+      <a href="kontakte.html" class="nav-button">👥 <span>Kontakte</span></a>
       <a href="anfragen.html" class="nav-button">✉️ <span>Anfragen</span></a>
     </div>
   </nav>
@@ -31,13 +30,15 @@
     <section class="content-box">
       <h2>Alle anstehenden Termine</h2>
       <p>
-        Diese Übersicht bündelt Trainingszeiten, Spiele und Vereinsereignisse
-        an einem Ort.
+        Diese Übersicht bündelt Trainingszeiten, Spiele und vereinsbezogene
+        Veranstaltungen an einem Ort. Dadurch können wichtige Termine schnell
+        gefunden und ohne zusätzliche Rückfragen eingesehen werden.
       </p>
     </section>
 
     <section class="content-box">
       <h2>Filter</h2>
+      <p>Wählen Sie aus, welche Termine angezeigt werden sollen.</p>
       <div class="filter-buttons">
         <button type="button" class="filter-button active-filter" onclick="filterAppointments('alle', this)">Alle</button>
         <button type="button" class="filter-button" onclick="filterAppointments('training', this)">Training</button>
@@ -51,7 +52,7 @@
       <div class="appointment-list">
         <article class="appointment-item" data-category="training">
           <h3>🏃 Dienstag, 18:30 Uhr</h3>
-          <p>Training Herrenmannschaft auf Platz 2</p>
+          <p>Training der Herrenmannschaft auf Platz 2</p>
         </article>
 
         <article class="appointment-item" data-category="training">
@@ -66,13 +67,34 @@
 
         <article class="appointment-item" data-category="spiel">
           <h3>🏆 Samstag, 15:00 Uhr</h3>
-          <p>Heimspiel gegen SV Obertal</p>
+          <p>Heimspiel gegen den SV Obertal</p>
         </article>
 
         <article class="appointment-item" data-category="verein">
           <h3>📅 Montag, 18:00 Uhr</h3>
           <p>Vorstandssitzung zur Saisonplanung</p>
         </article>
+      </div>
+    </section>
+
+    <section class="content-box">
+      <h2>Schnellzugriffe</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>📢 Informationen</h3>
+          <p>Aktuelle Hinweise und Änderungen im Vereinsalltag ansehen.</p>
+          <a class="inline-link" href="infos.html">Zu den Informationen</a>
+        </div>
+        <div class="card">
+          <h3>👥 Kontakte</h3>
+          <p>Wichtige Ansprechpartner aus Verein, Training und Organisation finden.</p>
+          <a class="inline-link" href="kontakte.html">Zu den Kontakten</a>
+        </div>
+        <div class="card">
+          <h3>✉️ Anfrage senden</h3>
+          <p>Ein Anliegen direkt an zuständige Personen übermitteln.</p>
+          <a class="inline-link" href="anfragen.html">Zur Anfrage</a>
+        </div>
       </div>
     </section>
   </main>
