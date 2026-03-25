@@ -12,17 +12,16 @@
   <header class="site-header">
     <div class="container">
       <h1>FootballForYou</h1>
-      <p>Anfragefunktion</p>
+      <p>Anfragen einfach und verständlich übermitteln</p>
     </div>
   </header>
 
   <nav class="main-nav" aria-label="Hauptnavigation">
     <div class="container nav-container">
       <a href="index.html" class="nav-button">🏠 <span>Start</span></a>
-      <a href="vorstand.html" class="nav-button">📋 <span>Vorstand</span></a>
-      <a href="trainer.html" class="nav-button">👨‍🏫 <span>Trainer</span></a>
-      <a href="spieler.html" class="nav-button">⚽ <span>Spieler</span></a>
       <a href="termine.html" class="nav-button">📅 <span>Termine</span></a>
+      <a href="infos.html" class="nav-button">📢 <span>Infos</span></a>
+      <a href="kontakte.html" class="nav-button">👥 <span>Kontakte</span></a>
       <a href="anfragen.html" class="nav-button active">✉️ <span>Anfragen</span></a>
     </div>
   </nav>
@@ -31,12 +30,19 @@
     <section class="content-box">
       <h2>Anfrage senden</h2>
       <p>
-        Über dieses Formular können organisatorische oder sportliche Anliegen
-        direkt an die zuständige Rolle übermittelt werden.
+        Über dieses Formular können organisatorische oder sportbezogene Anliegen
+        gezielt an die zuständige Person oder den zuständigen Bereich gesendet werden.
+        Die Funktion soll eine einfache und nachvollziehbare Kommunikation im
+        Vereinsalltag unterstützen.
       </p>
     </section>
 
     <section class="content-box">
+      <h2>Formular</h2>
+      <p>
+        Bitte geben Sie nur die Informationen ein, die für Ihre Anfrage notwendig sind.
+      </p>
+
       <form id="requestForm" class="request-form" novalidate>
         <div class="form-group">
           <label for="empfaenger">Empfänger</label>
@@ -53,7 +59,7 @@
             type="text"
             id="betreff"
             name="betreff"
-            placeholder="Betreff eingeben"
+            placeholder="Zum Beispiel: Änderung Trainingszeit"
           />
         </div>
 
@@ -63,13 +69,34 @@
             id="nachricht"
             name="nachricht"
             rows="6"
-            placeholder="Nachricht eingeben"
+            placeholder="Bitte beschreiben Sie Ihr Anliegen möglichst klar und kurz."
           ></textarea>
         </div>
 
         <button type="button" onclick="submitRequest()">Anfrage senden</button>
         <p id="formMessage" class="info-message" aria-live="polite"></p>
       </form>
+    </section>
+
+    <section class="content-box">
+      <h2>Schnellzugriffe</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>📅 Termine</h3>
+          <p>Trainingszeiten, Spiele und Vereinsveranstaltungen ansehen.</p>
+          <a class="inline-link" href="termine.html">Zur Terminübersicht</a>
+        </div>
+        <div class="card">
+          <h3>📢 Informationen</h3>
+          <p>Aktuelle Hinweise und Änderungen im Vereinsalltag öffnen.</p>
+          <a class="inline-link" href="infos.html">Zu den Informationen</a>
+        </div>
+        <div class="card">
+          <h3>👥 Kontakte</h3>
+          <p>Wichtige Ansprechpartner aus Verein und Training finden.</p>
+          <a class="inline-link" href="kontakte.html">Zu den Kontakten</a>
+        </div>
+      </div>
     </section>
   </main>
 
