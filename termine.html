@@ -31,19 +31,58 @@
       <h2>Alle anstehenden Termine</h2>
       <p>
         Diese Übersicht bündelt Trainingszeiten, Spiele und vereinsbezogene
-        Veranstaltungen an einem Ort. Dadurch können wichtige Termine schnell
-        gefunden und ohne zusätzliche Rückfragen eingesehen werden.
+        Veranstaltungen an einem Ort. Zu jedem Termin wird direkt angezeigt,
+        welche Mannschaft betroffen ist.
       </p>
     </section>
 
     <section class="content-box">
-      <h2>Filter</h2>
-      <p>Wählen Sie aus, welche Termine angezeigt werden sollen.</p>
-      <div class="filter-buttons">
-        <button type="button" class="filter-button active-filter" onclick="filterAppointments('alle', this)">Alle</button>
-        <button type="button" class="filter-button" onclick="filterAppointments('training', this)">Training</button>
-        <button type="button" class="filter-button" onclick="filterAppointments('spiel', this)">Spiele</button>
-        <button type="button" class="filter-button" onclick="filterAppointments('verein', this)">Verein</button>
+      <h2>Termine filtern</h2>
+      <p class="filter-help">
+        Wählen Sie aus, welche Termine angezeigt werden sollen. Es wird immer
+        nur eine Auswahl gleichzeitig angezeigt.
+      </p>
+
+      <p id="filterStatus" class="filter-status" aria-live="polite">
+        Aktuell angezeigt: Alle Termine
+      </p>
+
+      <div class="filter-buttons" role="group" aria-label="Filter für Termine">
+        <button
+          type="button"
+          class="filter-button active-filter"
+          aria-pressed="true"
+          onclick="filterAppointments('alle', this, 'Alle Termine')"
+        >
+          Alle Termine
+        </button>
+
+        <button
+          type="button"
+          class="filter-button"
+          aria-pressed="false"
+          onclick="filterAppointments('training', this, 'Nur Training')"
+        >
+          Nur Training
+        </button>
+
+        <button
+          type="button"
+          class="filter-button"
+          aria-pressed="false"
+          onclick="filterAppointments('spiel', this, 'Nur Spiele')"
+        >
+          Nur Spiele
+        </button>
+
+        <button
+          type="button"
+          class="filter-button"
+          aria-pressed="false"
+          onclick="filterAppointments('verein', this, 'Nur Verein')"
+        >
+          Nur Verein
+        </button>
       </div>
     </section>
 
@@ -51,50 +90,59 @@
       <h2>Terminliste</h2>
       <div class="appointment-list">
         <article class="appointment-item" data-category="training">
-          <h3>🏃 Dienstag, 18:30 Uhr</h3>
-          <p>Training der Herrenmannschaft auf Platz 2</p>
+          <h3>🏃 Herren I – Dienstag, 18:30 Uhr</h3>
+          <p>Training auf dem Sportplatz</p>
         </article>
 
         <article class="appointment-item" data-category="training">
-          <h3>🏃 Donnerstag, 19:00 Uhr</h3>
-          <p>Abschlusstraining vor dem Spiel am Wochenende</p>
+          <h3>🏃 Herren II – Dienstag, 20:00 Uhr</h3>
+          <p>Training auf dem Sportplatz</p>
         </article>
 
-        <article class="appointment-item" data-category="verein">
-          <h3>📋 Freitag, 18:00 Uhr</h3>
-          <p>Jugendtrainer-Besprechung im Vereinsheim</p>
+        <article class="appointment-item" data-category="training">
+          <h3>🏃 Damen – Mittwoch, 18:30 Uhr</h3>
+          <p>Training auf dem Sportplatz</p>
+        </article>
+
+        <article class="appointment-item" data-category="training">
+          <h3>🏃 A-Jugend – Montag, 17:00 Uhr</h3>
+          <p>Training auf dem Sportplatz</p>
+        </article>
+
+        <article class="appointment-item" data-category="training">
+          <h3>🏃 B-Jugend – Mittwoch, 17:00 Uhr</h3>
+          <p>Training auf dem Sportplatz</p>
+        </article>
+
+        <article class="appointment-item" data-category="training">
+          <h3>🏃 C-Jugend – Donnerstag, 17:00 Uhr</h3>
+          <p>Training auf dem Sportplatz</p>
         </article>
 
         <article class="appointment-item" data-category="spiel">
-          <h3>🏆 Samstag, 15:00 Uhr</h3>
-          <p>Heimspiel gegen den SV Obertal</p>
+          <h3>🏆 Herren I – Samstag, 15:00 Uhr</h3>
+          <p>Heimspiel auf dem Sportplatz gegen den SV Obertal</p>
+        </article>
+
+        <article class="appointment-item" data-category="spiel">
+          <h3>🏆 Damen – Sonntag, 13:00 Uhr</h3>
+          <p>Auswärtsspiel gegen FC Blau-Weiß</p>
+        </article>
+
+        <article class="appointment-item" data-category="spiel">
+          <h3>🏆 A-Jugend – Samstag, 11:00 Uhr</h3>
+          <p>Heimspiel auf dem Sportplatz gegen JSG Talblick</p>
         </article>
 
         <article class="appointment-item" data-category="verein">
-          <h3>📅 Montag, 18:00 Uhr</h3>
-          <p>Vorstandssitzung zur Saisonplanung</p>
+          <h3>📋 Trainerbesprechung – Freitag, 18:00 Uhr</h3>
+          <p>Besprechung im Vereinsheim</p>
         </article>
-      </div>
-    </section>
 
-    <section class="content-box">
-      <h2>Schnellzugriffe</h2>
-      <div class="card-container">
-        <div class="card">
-          <h3>📢 Informationen</h3>
-          <p>Aktuelle Hinweise und Änderungen im Vereinsalltag ansehen.</p>
-          <a class="inline-link" href="infos.html">Zu den Informationen</a>
-        </div>
-        <div class="card">
-          <h3>👥 Kontakte</h3>
-          <p>Wichtige Ansprechpartner aus Verein, Training und Organisation finden.</p>
-          <a class="inline-link" href="kontakte.html">Zu den Kontakten</a>
-        </div>
-        <div class="card">
-          <h3>✉️ Anfrage senden</h3>
-          <p>Ein Anliegen direkt an zuständige Personen übermitteln.</p>
-          <a class="inline-link" href="anfragen.html">Zur Anfrage</a>
-        </div>
+        <article class="appointment-item" data-category="verein">
+          <h3>📅 Vorstandssitzung – Montag, 18:00 Uhr</h3>
+          <p>Sitzung im Vereinsheim zur Saisonplanung</p>
+        </article>
       </div>
     </section>
   </main>
