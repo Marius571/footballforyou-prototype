@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FootballForYou – Infos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="container">
+      <h1>FootballForYou</h1>
+      <p>Aktuelle Hinweise und Vereinsinformationen</p>
+    </div>
+  </header>
+
+  <nav class="main-nav" aria-label="Hauptnavigation">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-button">🏠 <span>Start</span></a>
+      <a href="termine.html" class="nav-button">📅 <span>Termine</span></a>
+      <a href="infos.html" class="nav-button active">📢 <span>Infos</span></a>
+      <a href="kontakte.html" class="nav-button">👥 <span>Kontakte</span></a>
+      <a href="anfragen.html" class="nav-button">✉️ <span>Anfragen</span></a>
+    </div>
+  </nav>
+
+  <main id="main-content" class="container">
+    <section class="content-box">
+      <h2>Vereinsinformationen auf einen Blick</h2>
+      <p>
+        In diesem Bereich werden aktuelle Hinweise, organisatorische Informationen
+        und wichtige Mitteilungen des Vereins gebündelt dargestellt. Ziel ist es,
+        relevante Inhalte verständlich und zentral an einem Ort bereitzustellen.
+      </p>
+    </section>
+
+    <section class="content-box">
+      <h2>Aktuelle Hinweise</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>📢 Arbeitseinsatz</h3>
+          <p>Am Samstag findet ab 10:00 Uhr ein gemeinsamer Arbeitseinsatz auf dem Vereinsgelände statt.</p>
+        </div>
+        <div class="card">
+          <h3>⚠️ Trainingsänderung</h3>
+          <p>Das Training der B-Jugend wird in dieser Woche von Mittwoch auf Donnerstag verschoben.</p>
+        </div>
+        <div class="card">
+          <h3>🏆 Heimspieltag</h3>
+          <p>Am Wochenende finden mehrere Heimspiele statt. Bitte beachten Sie die aktuellen Treffpunkte und Zeiten.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-box">
+      <h2>Organisatorische Informationen</h2>
+      <ul class="info-list">
+        <li>Die Einladung zur nächsten Mitgliederversammlung wird in Kürze veröffentlicht.</li>
+        <li>Die Organisation des Heimspieltags wird aktuell mit den beteiligten Mannschaften abgestimmt.</li>
+        <li>Die Planung des Jugendturniers erfolgt gemeinsam mit den Trainerteams.</li>
+      </ul>
+    </section>
+
+    <section class="content-box">
+      <h2>Kommende Vereinsereignisse</h2>
+      <ul class="info-list">
+        <li>Freitag, 18:00 Uhr – Jugendtrainer-Besprechung im Vereinsheim</li>
+        <li>Samstag, 10:00 Uhr – Arbeitseinsatz auf dem Vereinsgelände</li>
+        <li>Montag, 18:00 Uhr – Vorstandssitzung zur Saisonplanung</li>
+      </ul>
+      <a class="action-link" href="termine.html">Zur Terminübersicht</a>
+    </section>
+
+    <section class="content-box">
+      <h2>Schnellzugriffe</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>📅 Termine</h3>
+          <p>Trainingszeiten, Spiele und Vereinsveranstaltungen zentral ansehen.</p>
+          <a class="inline-link" href="termine.html">Zu den Terminen</a>
+        </div>
+        <div class="card">
+          <h3>👥 Kontakte</h3>
+          <p>Wichtige Ansprechpartner aus Verein, Training und Organisation finden.</p>
+          <a class="inline-link" href="kontakte.html">Zu den Kontakten</a>
+        </div>
+        <div class="card">
+          <h3>✉️ Anfragen</h3>
+          <p>Anliegen verständlich und direkt an zuständige Personen senden.</p>
+          <a class="inline-link" href="anfragen.html">Zur Anfragefunktion</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Prototype by Marius</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
