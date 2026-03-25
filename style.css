@@ -5,7 +5,7 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.7;
   background-color: #f5f7fa;
   color: #222;
 }
@@ -51,8 +51,8 @@ body {
 
 .site-header p {
   margin: 0;
-  font-size: 1.15rem;
-  line-height: 1.4;
+  font-size: 1.2rem;
+  line-height: 1.45;
 }
 
 .main-nav {
@@ -77,9 +77,9 @@ body {
   color: #0f2f50;
   text-decoration: none;
   font-weight: bold;
-  padding: 0.9rem 1.2rem;
+  padding: 0.95rem 1.25rem;
   border-radius: 10px;
-  min-width: 140px;
+  min-width: 150px;
   justify-content: center;
   border: 2px solid transparent;
   transition: 0.2s ease;
@@ -128,14 +128,20 @@ main {
   font-size: 2rem;
 }
 
+.content-box p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.08rem;
+}
+
 button {
   background-color: #123b66;
   color: white;
   border: none;
-  padding: 0.85rem 1.2rem;
+  padding: 0.95rem 1.25rem;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.02rem;
   font-weight: bold;
 }
 
@@ -157,22 +163,28 @@ button:focus-visible {
 
 .card {
   background-color: #eef3f8;
-  padding: 1rem;
-  border-radius: 10px;
+  padding: 1.15rem;
+  border-radius: 12px;
   border: 1px solid #d6e1ec;
+  min-height: 160px;
 }
 
 .card h3 {
   margin-top: 0;
   margin-bottom: 0.75rem;
   line-height: 1.3;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.05rem;
 }
 
 .inline-link,
 .action-link {
   display: inline-block;
-  margin-top: 0.75rem;
+  margin-top: 0.85rem;
   color: #123b66;
   font-weight: bold;
   text-decoration: none;
@@ -199,7 +211,7 @@ button:focus-visible {
   background-color: #123b66;
   color: #ffffff;
   text-decoration: none;
-  padding: 0.85rem 1.2rem;
+  padding: 0.95rem 1.25rem;
   border-radius: 8px;
   font-weight: bold;
 }
@@ -216,13 +228,23 @@ button:focus-visible {
 }
 
 .info-list {
-  padding-left: 1.2rem;
+  padding-left: 1.4rem;
+  margin: 0;
+}
+
+.info-list li {
+  margin-bottom: 0.6rem;
+  font-size: 1.08rem;
+}
+
+.info-list li:last-child {
   margin-bottom: 0;
 }
 
 .info-message {
   margin-top: 1rem;
   font-weight: bold;
+  font-size: 1.05rem;
 }
 
 .request-form {
@@ -239,18 +261,19 @@ button:focus-visible {
 
 label {
   font-weight: bold;
-  font-size: 1.05rem;
+  font-size: 1.08rem;
 }
 
 input,
 select,
 textarea {
   width: 100%;
-  padding: 0.9rem;
+  padding: 0.95rem;
   border: 1px solid #b8c7d6;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 1.02rem;
   font-family: Arial, sans-serif;
+  line-height: 1.5;
 }
 
 input:focus,
@@ -261,22 +284,24 @@ textarea:focus {
   border-color: #123b66;
 }
 
-/* Verbesserter Filter */
+/* Filter */
 
 .filter-help {
   margin-bottom: 0.75rem;
+  font-size: 1.05rem;
 }
 
 .filter-status {
   display: inline-block;
   margin-top: 0;
   margin-bottom: 1rem;
-  padding: 0.75rem 1rem;
+  padding: 0.8rem 1rem;
   background-color: #eef3f8;
   border: 2px solid #d6e1ec;
   border-radius: 10px;
   font-weight: bold;
   color: #123b66;
+  font-size: 1.05rem;
 }
 
 .filter-buttons {
@@ -324,22 +349,25 @@ textarea:focus {
 
 .appointment-item {
   background-color: #eef3f8;
-  padding: 1.25rem;
+  padding: 1.25rem 1.25rem 1.2rem;
   border-radius: 12px;
   border: 1px solid #d6e1ec;
+  border-left: 8px solid #123b66;
 }
 
 .appointment-item h3 {
   margin-top: 0;
-  margin-bottom: 0.65rem;
-  font-size: 1.35rem;
+  margin-bottom: 0.55rem;
+  font-size: 1.38rem;
   line-height: 1.35;
+  color: #123b66;
 }
 
 .appointment-item p {
   margin: 0;
   font-size: 1.1rem;
-  line-height: 1.5;
+  line-height: 1.55;
+  color: #222;
 }
 
 .site-footer {
@@ -370,6 +398,7 @@ textarea:focus {
 
   .nav-button {
     width: 100%;
+    min-width: 0;
   }
 
   .content-box {
@@ -382,6 +411,10 @@ textarea:focus {
 
   .card-container {
     grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: auto;
   }
 
   .filter-buttons {
@@ -397,6 +430,10 @@ textarea:focus {
   .button-link {
     width: 100%;
     text-align: center;
+  }
+
+  .appointment-item {
+    padding: 1rem;
   }
 
   .appointment-item h3 {
