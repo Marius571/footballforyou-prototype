@@ -2,22 +2,34 @@ function submitRequest() {
   const empfaenger = document.getElementById("empfaenger");
   const betreff = document.getElementById("betreff");
   const nachricht = document.getElementById("nachricht");
+  const datenschutz = document.getElementById("datenschutz");
+  const website = document.getElementById("website");
   const formMessage = document.getElementById("formMessage");
 
-  if (!empfaenger || !betreff || !nachricht || !formMessage) {
+  if (!empfaenger || !betreff || !nachricht || !datenschutz || !website || !formMessage) {
     return;
   }
 
-  const felder = [empfaenger, betreff, nachricht];
+  const felder = [empfaenger, betreff, nachricht, datenschutz];
 
   felder.forEach((feld) => {
     feld.classList.remove("error-field");
     feld.removeAttribute("aria-invalid");
   });
 
+  formMessage.textContent = "";
+
   const empfaengerWert = empfaenger.value.trim();
   const betreffWert = betreff.value.trim();
   const nachrichtWert = nachricht.value.trim();
+  const honeypotWert = website.value.trim();
+
+  if (honeypotWert !== "") {
+    formMessage.textContent =
+      "Die Anfrage konnte nicht verarbeitet werden.";
+    formMessage.style.color = "#b00020";
+    return;
+  }
 
   let fehlerVorhanden = false;
 
@@ -39,20 +51,27 @@ function submitRequest() {
     fehlerVorhanden = true;
   }
 
+  if (!datenschutz.checked) {
+    datenschutz.classList.add("error-field");
+    datenschutz.setAttribute("aria-invalid", "true");
+    fehlerVorhanden = true;
+  }
+
   if (fehlerVorhanden) {
     formMessage.textContent =
-      "Bitte füllen Sie alle Pflichtfelder vollständig aus.";
+      "Bitte füllen Sie alle Pflichtfelder aus und stimmen Sie den Datenschutzhinweisen zu.";
     formMessage.style.color = "#b00020";
     return;
   }
 
   formMessage.textContent =
-    "Ihre Nachricht wurde erfolgreich gesendet.";
+    "Ihre Nachricht wurde erfolgreich geprüft und im Prototyp zum Versand vorbereitet.";
   formMessage.style.color = "#1b6e1b";
 
   empfaenger.value = "";
   betreff.value = "";
   nachricht.value = "";
+  datenschutz.checked = false;
 }
 
 function filterAppointments(category, clickedButton, label) {
