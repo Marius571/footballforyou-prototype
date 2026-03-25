@@ -47,6 +47,103 @@ body.font-large {
   font-weight: bold;
 }
 
+/* Meta-Leiste */
+
+.meta-bar {
+  background-color: #e9edf2;
+  border-bottom: 1px solid #d2dbe5;
+}
+
+.meta-bar-inner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 48px;
+  position: relative;
+}
+
+.view-menu {
+  position: relative;
+}
+
+.view-menu-button {
+  background-color: #ffffff;
+  color: #123b66;
+  border: 2px solid #c7d4e2;
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  font-size: 0.98rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.view-menu-button:hover {
+  background-color: #f5f8fb;
+  opacity: 1;
+}
+
+.view-menu-button:focus,
+.view-menu-button:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 2px;
+}
+
+.view-menu-panel {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  width: 270px;
+  background: #ffffff;
+  border: 1px solid #d6e1ec;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  padding: 1rem;
+  z-index: 100;
+}
+
+.view-menu-title {
+  margin: 0 0 0.85rem 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #123b66;
+}
+
+.view-menu-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.font-button {
+  background-color: #ffffff;
+  color: #123b66;
+  border: 2px solid #c7d4e2;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+}
+
+.font-button:hover {
+  background-color: #eef3f8;
+  opacity: 1;
+}
+
+.font-button.active-font {
+  background-color: #ffbf47;
+  color: #000;
+  border-color: #123b66;
+}
+
+.font-button:focus,
+.font-button:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 2px;
+}
+
+/* Header */
+
 .site-header {
   background-color: #123b66;
   color: white;
@@ -78,51 +175,7 @@ body.font-large {
   line-height: 1.45;
 }
 
-.font-controls {
-  background-color: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 10px;
-  padding: 0.75rem;
-  min-width: 190px;
-}
-
-.font-controls-label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.font-buttons {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.font-button {
-  background-color: #ffffff;
-  color: #123b66;
-  border: 2px solid transparent;
-  padding: 0.7rem 0.9rem;
-  border-radius: 8px;
-  font-weight: bold;
-  min-width: 52px;
-}
-
-.font-button:hover {
-  background-color: #eaf1f8;
-  opacity: 1;
-}
-
-.font-button.active-font {
-  background-color: #ffbf47;
-  color: #000;
-  border-color: #ffffff;
-}
-
-.font-button:focus,
-.font-button:focus-visible {
-  outline: 3px solid #ffbf47;
-  outline-offset: 2px;
-}
+/* Navigation */
 
 .main-nav {
   background-color: #0f2f50;
@@ -176,6 +229,8 @@ body.font-large {
   color: #ffffff;
   border-color: #ffffff;
 }
+
+/* Inhalt */
 
 main {
   padding-top: 1.5rem;
@@ -296,6 +351,8 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
+/* Listen */
+
 .info-list {
   padding-left: 1.4rem;
   margin: 0;
@@ -315,6 +372,8 @@ button:focus-visible {
   font-weight: bold;
   font-size: 1.05rem;
 }
+
+/* Formular */
 
 .request-form {
   display: flex;
@@ -396,6 +455,8 @@ textarea:focus {
   overflow: hidden;
 }
 
+/* Filter */
+
 .filter-help {
   margin-bottom: 0.75rem;
   font-size: 1.05rem;
@@ -450,6 +511,8 @@ textarea:focus {
   outline-offset: 3px;
 }
 
+/* Terminliste */
+
 .appointment-list {
   display: grid;
   gap: 1rem;
@@ -478,6 +541,8 @@ textarea:focus {
   color: #222;
 }
 
+/* Footer */
+
 .site-footer {
   text-align: center;
   padding: 1.5rem 0;
@@ -485,7 +550,27 @@ textarea:focus {
   color: white;
 }
 
+/* Mobil */
+
 @media (max-width: 768px) {
+  .meta-bar-inner {
+    justify-content: stretch;
+  }
+
+  .view-menu {
+    width: 100%;
+  }
+
+  .view-menu-button {
+    width: 100%;
+  }
+
+  .view-menu-panel {
+    position: static;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
   .site-header {
     padding: 1.25rem 0 1rem;
   }
@@ -505,18 +590,6 @@ textarea:focus {
 
   .site-header p {
     font-size: 1rem;
-  }
-
-  .font-controls {
-    min-width: 0;
-  }
-
-  .font-buttons {
-    flex-wrap: wrap;
-  }
-
-  .font-button {
-    flex: 1;
   }
 
   .nav-container {
