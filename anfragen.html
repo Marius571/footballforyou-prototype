@@ -49,11 +49,12 @@
       <p>
         Bitte tragen Sie nur die Informationen ein, die für Ihre Anfrage wichtig sind.
       </p>
+      <p class="form-note"><span class="required-marker">*</span> Pflichtfeld</p>
 
       <form id="requestForm" class="request-form" novalidate>
         <div class="form-group">
-          <label for="empfaenger">An wen möchten Sie schreiben?</label>
-          <select id="empfaenger" name="empfaenger">
+          <label for="empfaenger">An wen möchten Sie schreiben? <span class="required-marker">*</span></label>
+          <select id="empfaenger" name="empfaenger" aria-required="true">
             <option value="">Bitte auswählen</option>
             <option value="vorstand">Vorstand</option>
             <option value="trainer">Trainerteam</option>
@@ -61,22 +62,24 @@
         </div>
 
         <div class="form-group">
-          <label for="betreff">Worum geht es?</label>
+          <label for="betreff">Worum geht es? <span class="required-marker">*</span></label>
           <input
             type="text"
             id="betreff"
             name="betreff"
             placeholder="Zum Beispiel: Frage zur Trainingszeit"
+            aria-required="true"
           />
         </div>
 
         <div class="form-group">
-          <label for="nachricht">Ihre Nachricht</label>
+          <label for="nachricht">Ihre Nachricht <span class="required-marker">*</span></label>
           <textarea
             id="nachricht"
             name="nachricht"
             rows="6"
             placeholder="Bitte beschreiben Sie Ihr Anliegen möglichst kurz und verständlich."
+            aria-required="true"
           ></textarea>
         </div>
 
