@@ -41,14 +41,14 @@ function toggleViewMenu() {
     return;
   }
 
-  const isOpen = !panel.hasAttribute("hidden");
+  const isHidden = panel.hasAttribute("hidden");
 
-  if (isOpen) {
-    panel.setAttribute("hidden", "");
-    toggleButton.setAttribute("aria-expanded", "false");
-  } else {
+  if (isHidden) {
     panel.removeAttribute("hidden");
     toggleButton.setAttribute("aria-expanded", "true");
+  } else {
+    panel.setAttribute("hidden", "");
+    toggleButton.setAttribute("aria-expanded", "false");
   }
 }
 
