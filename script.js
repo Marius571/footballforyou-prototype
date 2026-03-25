@@ -4,14 +4,14 @@ function applySavedFontSize() {
 }
 
 function setFontSize(size, save = true) {
-  document.body.classList.remove("font-small", "font-default", "font-large");
+  document.documentElement.classList.remove("font-small", "font-default", "font-large");
 
   if (size === "small") {
-    document.body.classList.add("font-small");
+    document.documentElement.classList.add("font-small");
   } else if (size === "large") {
-    document.body.classList.add("font-large");
+    document.documentElement.classList.add("font-large");
   } else {
-    document.body.classList.add("font-default");
+    document.documentElement.classList.add("font-default");
   }
 
   const buttons = document.querySelectorAll(".font-button");
