@@ -1,13 +1,3 @@
-function showMessage() {
-  const message = document.getElementById("message");
-
-  if (message) {
-    message.textContent =
-      "FootballForYou bündelt Termine, Aufgaben und Anfragen in einer verständlichen und barrierearmen Oberfläche.";
-    message.style.color = "#123b66";
-  }
-}
-
 function submitRequest() {
   const empfaenger = document.getElementById("empfaenger");
   const betreff = document.getElementById("betreff");
@@ -18,11 +8,11 @@ function submitRequest() {
     return;
   }
 
-  if (
-    empfaenger.value.trim() === "" ||
-    betreff.value.trim() === "" ||
-    nachricht.value.trim() === ""
-  ) {
+  const empfaengerWert = empfaenger.value.trim();
+  const betreffWert = betreff.value.trim();
+  const nachrichtWert = nachricht.value.trim();
+
+  if (empfaengerWert === "" || betreffWert === "" || nachrichtWert === "") {
     formMessage.textContent = "Bitte füllen Sie alle Felder vollständig aus.";
     formMessage.style.color = "#b00020";
     return;
