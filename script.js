@@ -1,3 +1,37 @@
+function applySavedFontSize() {
+  const savedSize = localStorage.getItem("footballForYouFontSize") || "default";
+  setFontSize(savedSize, false);
+}
+
+function setFontSize(size, save = true) {
+  document.body.classList.remove("font-small", "font-default", "font-large");
+
+  if (size === "small") {
+    document.body.classList.add("font-small");
+  } else if (size === "large") {
+    document.body.classList.add("font-large");
+  } else {
+    document.body.classList.add("font-default");
+  }
+
+  const buttons = document.querySelectorAll(".font-button");
+  buttons.forEach((button) => button.classList.remove("active-font"));
+
+  const clickedMap = {
+    small: 0,
+    default: 1,
+    large: 2
+  };
+
+  if (buttons.length === 3 && clickedMap[size] !== undefined) {
+    buttons[clickedMap[size]].classList.add("active-font");
+  }
+
+  if (save) {
+    localStorage.setItem("footballForYouFontSize", size);
+  }
+}
+
 function submitRequest() {
   const empfaenger = document.getElementById("empfaenger");
   const betreff = document.getElementById("betreff");
@@ -101,3 +135,5 @@ function filterAppointments(category, clickedButton, label) {
     filterStatus.textContent = "Aktuell angezeigt: " + label;
   }
 }
+
+document.addEventListener("DOMContentLoaded", applySavedFontSize);
