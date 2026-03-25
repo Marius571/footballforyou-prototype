@@ -52,6 +52,17 @@
       <p class="form-note"><span class="required-marker">*</span> Pflichtfeld</p>
 
       <form id="requestForm" class="request-form" novalidate>
+        <div class="form-group honeypot-field" aria-hidden="true">
+          <label for="website">Bitte dieses Feld leer lassen</label>
+          <input
+            type="text"
+            id="website"
+            name="website"
+            tabindex="-1"
+            autocomplete="off"
+          />
+        </div>
+
         <div class="form-group">
           <label for="empfaenger">An wen möchten Sie schreiben? <span class="required-marker">*</span></label>
           <select id="empfaenger" name="empfaenger" aria-required="true">
@@ -83,9 +94,31 @@
           ></textarea>
         </div>
 
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label" for="datenschutz">
+            <input
+              type="checkbox"
+              id="datenschutz"
+              name="datenschutz"
+              aria-required="true"
+            />
+            Ich habe die <a href="#datenschutz-hinweis">Datenschutzhinweise</a> gelesen und stimme der Verarbeitung meiner Angaben zum Zweck der Bearbeitung meiner Anfrage zu. <span class="required-marker">*</span>
+          </label>
+        </div>
+
         <button type="button" onclick="submitRequest()">Anfrage senden</button>
         <p id="formMessage" class="info-message" aria-live="polite"></p>
       </form>
+    </section>
+
+    <section id="datenschutz-hinweis" class="content-box">
+      <h2>Datenschutz und Sicherheit</h2>
+      <ul class="info-list">
+        <li>In einem produktiven System müssen alle Formulareingaben serverseitig validiert und bereinigt werden, um Angriffe wie Cross-Site Scripting (XSS) und SQL-Injection zu verhindern.</li>
+        <li>Die Übertragung personenbezogener Daten darf nur verschlüsselt über HTTPS/TLS erfolgen.</li>
+        <li>Zur Reduktion automatisierter Spam-Anfragen ist im Prototyp ein Honeypot-Feld vorgesehen.</li>
+        <li>Eine Anfrage kann nur nach Zustimmung zu den Datenschutzhinweisen abgesendet werden.</li>
+      </ul>
     </section>
 
     <section class="content-box">
