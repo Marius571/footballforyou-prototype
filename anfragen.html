@@ -30,46 +30,53 @@
     <section class="content-box">
       <h2>Anfrage senden</h2>
       <p>
-        Über dieses Formular können organisatorische oder sportbezogene Anliegen
-        gezielt an die zuständige Person oder den zuständigen Bereich gesendet werden.
-        Die Funktion soll eine einfache und nachvollziehbare Kommunikation im
-        Vereinsalltag unterstützen.
+        Über dieses Formular können Sie ein Anliegen einfach an den Verein senden.
+        Die Anfrage wird an den passenden Bereich weitergeleitet.
       </p>
     </section>
 
     <section class="content-box">
-      <h2>Formular</h2>
+      <h2>Wobei können wir helfen?</h2>
+      <ul class="info-list">
+        <li>Bei Fragen zu Training, Spiel oder Mannschaft: <strong>Trainerteam</strong></li>
+        <li>Bei organisatorischen Fragen oder Vereinsangelegenheiten: <strong>Vorstand</strong></li>
+        <li>Wenn Sie unsicher sind, wählen Sie bitte <strong>Vorstand</strong></li>
+      </ul>
+    </section>
+
+    <section class="content-box">
+      <h2>Formular ausfüllen</h2>
       <p>
-        Bitte geben Sie nur die Informationen ein, die für Ihre Anfrage notwendig sind.
+        Bitte tragen Sie nur die Informationen ein, die für Ihre Anfrage wichtig sind.
       </p>
 
       <form id="requestForm" class="request-form" novalidate>
         <div class="form-group">
-          <label for="empfaenger">Empfänger</label>
+          <label for="empfaenger">An wen möchten Sie schreiben?</label>
           <select id="empfaenger" name="empfaenger">
             <option value="">Bitte auswählen</option>
             <option value="vorstand">Vorstand</option>
-            <option value="trainer">Trainer</option>
+            <option value="trainer">Trainerteam</option>
           </select>
         </div>
 
         <div class="form-group">
-          <label for="betreff">Betreff</label>
+          <label for="betreff">Worum geht es?</label>
           <input
             type="text"
             id="betreff"
             name="betreff"
-            placeholder="Zum Beispiel: Änderung Trainingszeit"
+            placeholder="Zum Beispiel: Frage zur Trainingszeit"
           />
         </div>
 
         <div class="form-group">
-          <label for="nachricht">Nachricht</label>
+          <label for="nachricht">Ihre Nachricht</label>
           <textarea
             id="nachricht"
             name="nachricht"
             rows="6"
-            placeholder="Bitte beschreiben Sie Ihr Anliegen möglichst klar und kurz."
+            placeholder="Bitte beschreiben Sie Ihr Anliegen möglichst kurz und verständlich."
           ></textarea>
         </div>
 
@@ -79,24 +86,11 @@
     </section>
 
     <section class="content-box">
-      <h2>Schnellzugriffe</h2>
-      <div class="card-container">
-        <div class="card">
-          <h3>📅 Termine</h3>
-          <p>Trainingszeiten, Spiele und Vereinsveranstaltungen ansehen.</p>
-          <a class="inline-link" href="termine.html">Zur Terminübersicht</a>
-        </div>
-        <div class="card">
-          <h3>📢 Informationen</h3>
-          <p>Aktuelle Hinweise und Änderungen im Vereinsalltag öffnen.</p>
-          <a class="inline-link" href="infos.html">Zu den Informationen</a>
-        </div>
-        <div class="card">
-          <h3>👥 Kontakte</h3>
-          <p>Wichtige Ansprechpartner aus Verein und Training finden.</p>
-          <a class="inline-link" href="kontakte.html">Zu den Kontakten</a>
-        </div>
-      </div>
+      <h2>Weitere Hilfe</h2>
+      <p>
+        Wenn Sie zuerst einen Ansprechpartner suchen, finden Sie diesen im Bereich Kontakte.
+      </p>
+      <a class="inline-link" href="kontakte.html">Zu den Kontakten</a>
     </section>
   </main>
 
