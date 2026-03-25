@@ -26,9 +26,10 @@ function submitRequest() {
   nachricht.value = "";
 }
 
-function filterAppointments(category, clickedButton) {
+function filterAppointments(category, clickedButton, label) {
   const appointments = document.querySelectorAll(".appointment-item");
   const filterButtons = document.querySelectorAll(".filter-button");
+  const filterStatus = document.getElementById("filterStatus");
 
   appointments.forEach((item) => {
     if (category === "alle" || item.dataset.category === category) {
@@ -40,9 +41,15 @@ function filterAppointments(category, clickedButton) {
 
   filterButtons.forEach((button) => {
     button.classList.remove("active-filter");
+    button.setAttribute("aria-pressed", "false");
   });
 
   if (clickedButton) {
     clickedButton.classList.add("active-filter");
+    clickedButton.setAttribute("aria-pressed", "true");
+  }
+
+  if (filterStatus && label) {
+    filterStatus.textContent = "Aktuell angezeigt: " + label;
   }
 }
