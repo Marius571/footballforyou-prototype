@@ -17,19 +17,51 @@ function setFontSize(size, save = true) {
   const buttons = document.querySelectorAll(".font-button");
   buttons.forEach((button) => button.classList.remove("active-font"));
 
-  const clickedMap = {
+  const buttonIndexMap = {
     small: 0,
     default: 1,
     large: 2
   };
 
-  if (buttons.length === 3 && clickedMap[size] !== undefined) {
-    buttons[clickedMap[size]].classList.add("active-font");
+  const targetIndex = buttonIndexMap[size];
+  if (targetIndex !== undefined && buttons[targetIndex]) {
+    buttons[targetIndex].classList.add("active-font");
   }
 
   if (save) {
     localStorage.setItem("footballForYouFontSize", size);
   }
+}
+
+function toggleViewMenu() {
+  const toggleButton = document.getElementById("viewMenuToggle");
+  const panel = document.getElementById("viewMenuPanel");
+
+  if (!toggleButton || !panel) {
+    return;
+  }
+
+  const isOpen = !panel.hasAttribute("hidden");
+
+  if (isOpen) {
+    panel.setAttribute("hidden", "");
+    toggleButton.setAttribute("aria-expanded", "false");
+  } else {
+    panel.removeAttribute("hidden");
+    toggleButton.setAttribute("aria-expanded", "true");
+  }
+}
+
+function closeViewMenu() {
+  const toggleButton = document.getElementById("viewMenuToggle");
+  const panel = document.getElementById("viewMenuPanel");
+
+  if (!toggleButton || !panel) {
+    return;
+  }
+
+  panel.setAttribute("hidden", "");
+  toggleButton.setAttribute("aria-expanded", "false");
 }
 
 function submitRequest() {
@@ -59,8 +91,7 @@ function submitRequest() {
   const honeypotWert = website.value.trim();
 
   if (honeypotWert !== "") {
-    formMessage.textContent =
-      "Die Anfrage konnte nicht verarbeitet werden.";
+    formMessage.textContent = "Die Anfrage konnte nicht verarbeitet werden.";
     formMessage.style.color = "#b00020";
     return;
   }
@@ -135,5 +166,24 @@ function filterAppointments(category, clickedButton, label) {
     filterStatus.textContent = "Aktuell angezeigt: " + label;
   }
 }
+
+document.addEventListener("click", function (event) {
+  const viewMenu = document.querySelector(".view-menu");
+  const panel = document.getElementById("viewMenuPanel");
+
+  if (!viewMenu || !panel || panel.hasAttribute("hidden")) {
+    return;
+  }
+
+  if (!viewMenu.contains(event.target)) {
+    closeViewMenu();
+  }
+});
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closeViewMenu();
+  }
+});
 
 document.addEventListener("DOMContentLoaded", applySavedFontSize);
